@@ -101,7 +101,8 @@ services:
       - EDV_REST_HOST_URL=${EDV_HOST}:${EDV_PORT}${EDV_ROOT_ENDPOINT}
       - BLOC_DOMAIN=testnet.trustbloc.local
       - UNIVERSAL_RESOLVER_HOST_URL=http://did.rest.example.com:8072/1.0/identifiers
-      - DATABASE_TYPE=mem
+      - DATABASE_TYPE=mysql
+      - DATABASE_URL=vcs:vcs-secret-pw@tcp(mysql:3306)/
       - KMSSECRETS_DATABASE_TYPE=mem
       - VC_REST_MODE=governance
       - VC_REST_TLS_CACERTS=/etc/tls/ec-cacert.pem
